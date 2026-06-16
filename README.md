@@ -1,0 +1,1 @@
+# Compiling FEniCS with EESSI
