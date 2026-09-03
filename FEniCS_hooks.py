@@ -40,23 +40,14 @@ def pre_test_hook_SuperLU_DIST(easyblock):
     def test_step_super_lu():
         return _test_step_super_lu(easyblock)
 
-    setattr(easyblock, 'test_step', test_step_super_lu)
-
-def pre_configure_hook_PETSc(easyblock, *args, **kwargs):
-    eprefix = get_eessi_envvar('EPREFIX')
-
-    easyblock.cfg['configopts'] = " ".join(
-        [
-            easyblock.cfg['configopts'],
-            fr'--with-zlib-include=[{eprefix}/usr/include]',
-            fr'--with-zlib-lib=[{eprefix}/usr/lib64/libz.so]',
-        ]
-    )
+    if self.name == 'SuperLU_DIST':
+        setattr(easyblock, 'test_step', test_step_super_lu)
+    else:
+        raise EasyBuildError("SuperLU_DIST-specific hook triggered for non-SuperLU_DIST easyconfig?!")
 
 PRE_TEST_HOOKS = {
     'SuperLU_DIST': pre_test_hook_SuperLU_DIST
 }
 
 PRE_CONFIGURE_HOOKS = {
-    'PETSc': pre_configure_hook_PETSc
 }
