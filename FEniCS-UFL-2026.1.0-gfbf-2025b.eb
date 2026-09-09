@@ -31,4 +31,8 @@ runtest = 'python -m pytest -n auto test/'
 
 options = {'modulename': 'ufl'}
 
+sanity_check_commands = [
+    "python -c 'import ufl; print(ufl.__version__)'",
+]
+
 moduleclass = 'math'

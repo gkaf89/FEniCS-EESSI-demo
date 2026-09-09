@@ -47,8 +47,12 @@ configopts = (
 )
 
 sanity_check_paths = {
-    'files': ['include/dolfinx.h', f'lib/libdolfinx.{SHLIB_EXT}'],
+    'files': ['include/dolfinx.h', f'lib/libdolfinx.{SHLIB_EXT}', 'include/dolfinx/common/version.h],
     'dirs': ['include/dolfinx', 'lib/cmake/dolfinx'],
 }
+
+sanity_check_commands = [
+    """grep -Fq '#define DOLFINX_VERSION_STRING  "0.11.0"' "%(installdir)s/include/dolfinx/common/version.h" """,
+]
 
 moduleclass = 'cae'

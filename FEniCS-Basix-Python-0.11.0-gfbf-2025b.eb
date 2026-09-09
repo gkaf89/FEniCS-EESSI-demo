@@ -30,4 +30,10 @@ exts_list = [
     }),
 ]
 
+sanity_check_commands = [
+    'python -c "import basix; '
+    'e = basix.create_element(basix.ElementFamily.P, basix.CellType.triangle, 1); '
+    'assert e.dim == 3, f\'Expected 3 DOFs, got {e.dim}\'"',
+]
+
 moduleclass = 'cae'
