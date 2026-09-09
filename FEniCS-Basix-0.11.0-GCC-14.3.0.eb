@@ -25,7 +25,9 @@ srcdir = "cpp"
 
 sanity_check_paths = {
     'files': [f'lib/libbasix.{SHLIB_EXT}'],
-    'dirs': ['include'],
+            'include/basix/version.h',
+            'lib/cmake/basix/BasixConfigVersion.cmake',
+    'dirs': ['include/basix'],
 }
 
 moduleclass = 'cae'

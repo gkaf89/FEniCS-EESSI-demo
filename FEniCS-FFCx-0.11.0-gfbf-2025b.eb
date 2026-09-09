@@ -30,4 +30,8 @@ dependencies = [
 
 options = {'modulename': 'ffcx'}
 
+sanity_check_commands=[
+    'python -c "import ffcx; assert ffcx.__version__"',
+]
+
 moduleclass = 'cae'
