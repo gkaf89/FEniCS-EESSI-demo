@@ -1,0 +1,6 @@
+FEniCS-Basix-Python => FEniCS-Basix
+FEniCS-FFCx => FEniCS-Basix-Python, FEniCS-UFL
+FEniCS-DOLFINx => FEniCS-Basix, FEniCS-FFCx, FEniCS-UFL, FEniCS-ufcx
+FEniCS-DOLFINx-Python => FEniCS-Basix-Python, FEniCS-FFCx, FEniCS-UFL, FEniCS-DOLFINx
+
+C/C++ packages: FEniCS-ufcx, FEniCS-Basix, FEniCS-DOLFINx
