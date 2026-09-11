@@ -26,5 +26,5 @@ jobs:
         unset EASYBUILD_DEBUG
         eb --logtostdout --software-commit=$GITHUB_SHA \
           --robot --robot-path='${PWD}:' \
-          FEniCS-DOLFINx-Python-0.11.0.post0-foss-2025b.eb      
+          FEniCS-Basix-0.11.0-GCC-14.3.0.eb
       shell: bash
