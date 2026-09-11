@@ -25,6 +25,6 @@ jobs:
         module load EESSI-extend
         unset EASYBUILD_DEBUG
         eb --logtostdout --software-commit=$GITHUB_SHA \
-          --robot --robot-path="${PWD}:" \
+          --robot --robot-path=$GITHUB_WORKSPACE: \
           FEniCS-DOLFINx-Python-0.11.0.post0-foss-2025b.eb
       shell: bash
