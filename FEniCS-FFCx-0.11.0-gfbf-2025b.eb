@@ -41,7 +41,10 @@ _test_targets = [ 'test/%s' % test for test in
 _tests = ' '.join(_test_targets)
 
 testinstall = True
-runtest = 'python -m pytest -n auto %s' % _tests
+runtest = (
+    'python test/poisson.py && '
+    'python -m pytest -n auto %s' % _tests
+)
 
 options = {'modulename': 'ffcx'}
 
