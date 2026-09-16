@@ -45,4 +45,8 @@ runtest = 'python -m pytest -n auto %s' % _tests
 
 options = {'modulename': 'ffcx'}
 
+sanity_check_commands = [
+    fr"ffcx --version | grep -qE 'ffcx \(version {version}\)'"
+]
+
 moduleclass = 'cae'
