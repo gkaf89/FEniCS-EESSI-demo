@@ -1,0 +1,44 @@
+easyblock = 'EB_numpy'
+
+name = 'numpy'
+version = '2.3.2'
+
+homepage = 'https://numpy.org/'
+description = "NumPy provides arrays and numerical computing tools for Python."
+
+toolchain = {'name': 'gfbf', 'version': '2025b'}
+toolchainopts = {'pic': True, 'lowopt': True}
+
+source_urls = ['https://pypi.python.org/packages/source/n/numpy/']
+sources = [SOURCE_TAR_GZ]
+
+#patches = [
+#    'numpy-1.22.3_disable-broken-override-test.patch',
+#    'numpy-2.3.1_fix_f2py_object_files.patch',
+#]
+
+checksums = [
+    'e0486a11ec30cdecb53f184d496d1c6a20786c81e55e41640270130056f8ee48',
+ #   '9c589bb073b28b25ff45eb3c63c57966aa508dd8b318d0b885b6295271e4983c',
+ #   'b586083c384becc9ef7908af171c9034473514f8c8741d15b8bda23da503718f',
+]
+
+builddependencies = [
+    ('hypothesis', '6.136.6'),
+    ('Meson', '1.8.2'),
+    ('meson-python', '0.18.0'),
+    ('Ninja', '1.13.0'),
+    ('pkgconf', '2.4.3'),
+    ('Cython', '3.1.2'),
+    ('spin', '0.14'),
+]
+
+dependencies = [
+    ('Python', '3.13.5'),
+    ('Python-bundle-PyPI', '2025.07'),
+]
+
+use_pip = True
+sanity_pip_check = True
+
+moduleclass = 'lang'
