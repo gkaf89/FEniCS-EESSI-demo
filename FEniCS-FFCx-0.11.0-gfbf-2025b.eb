@@ -23,7 +23,7 @@ builddependencies = [
 
 dependencies = [
     ('Python', '3.13.5'),
-    ('SciPy-bundle', '2025.07'),
+    ('numpy', '2.3.2'),
     ('FEniCS-Basix-Python', '0.11.0'),
     ('FEniCS-UFL', '2026.1.0'),
 ]
